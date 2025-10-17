@@ -28,6 +28,10 @@ import asyncio, logging
 import tgcrypto
 from pyromod import listen
 from logging.handlers import RotatingFileHandler
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # .env file को load कर देगा
 
 LOGGER = logging.getLogger(__name__)
 logging.basicConfig(
@@ -68,3 +72,4 @@ if __name__ == "__main__" :
     
     asyncio.get_event_loop().run_until_complete(main())
     LOGGER.info(f"<---Bot Stopped-->")
+
